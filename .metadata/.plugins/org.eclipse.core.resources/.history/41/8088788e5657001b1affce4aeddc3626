@@ -1,0 +1,27 @@
+package animals;
+
+public class Animal {
+
+	public static void main(String[] args) {
+		introduce();
+		entertain();
+
+	}
+
+	public static String introduce() {
+		return "I am a dog";
+	}
+
+	public static void entertain() {
+		int a = 5;
+		int b = 10;
+
+		for (int i = 0; i < a; i++) {
+			b += 1;
+			System.out.println(b);
+		}
+
+		System.out.println("finished!");
+	}
+
+}

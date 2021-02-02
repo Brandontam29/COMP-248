@@ -1,0 +1,52 @@
+
+// -------------------------------------------------------
+// Assignment 1
+// Written by: Brandon Tam 40100539
+// For COMP 248 Section U – Winter 2021
+// --------------------------------------------------------
+/*
+ * This programs aims to take a 6-digit number inputed by the user, and apply encryption to it. 
+ * First, it isolates each digit, then it applies unique encryption formula to each. And finally, 
+ * it recombines the lone digits to reform the password.
+ * 
+ * Note: This program is incredibly basic, and there are many flaws that hinders user experience 
+ * such as NOT checking for correct input.
+ */
+
+import java.util.Scanner;
+
+public class Encryption {
+
+	public static void main(String[] args) {
+
+		System.out.println(
+				"******************************************\n  Welcome to Word Encrypter Pro\n******************************************");
+
+		// Takes and stores the user input
+		final String FIRST_WORD;
+		final String SECOND_WORD;
+		Scanner keyIn = new Scanner(System.in);
+
+		System.out.println("\nEnter the first word with 3 characters");
+		FIRST_WORD = keyIn.nextLine();
+
+		System.out.println("\nEnter the second word with 3 characters");
+		secondWord = keyIn.nextLine();
+
+		System.out.println("\nThe length of the word \"" + FIRST_WORD + "\" is " + FIRST_WORD.length());
+		System.out.println("The length of the word \"" + SECOND_WORD + "\" is " + SECOND_WORD.length());
+
+		String combinedWord = FIRST_WORD.substring(2, 3) + SECOND_WORD.substring(2, 3) + FIRST_WORD.substring(0, 1)
+				+ SECOND_WORD.substring(0, 1) + FIRST_WORD.substring(1, 2) + SECOND_WORD.substring(1, 2);
+
+		System.out.println("\nHere is the combined word: " + combinedWord);
+
+		System.out.println("\nGenerating the encrypted word ...");
+
+		System.out.println("\nHere is the encrypted word: " + combinedWord);
+		System.out.println("\nThank you for using Word Encryption Pro");
+
+		keyIn.close();
+	}
+
+}
