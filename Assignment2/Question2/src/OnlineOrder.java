@@ -91,16 +91,16 @@ public class OnlineOrder {
 								addMeat = "";
 								price += 25.5f;
 								meatChoice = "";
-							}
-
-							if (meatChoice.equals("Pork") || meatChoice.equals("pork")) {
-								choice = "";
-								addMeat = "";
-								price += 17.5f;
-								meatChoice = "";
 							} else {
-								System.out.println("\nBeef or Pork");
-								isWrongAnswer = true;
+								if (meatChoice.equals("Pork") || meatChoice.equals("pork")) {
+									choice = "";
+									addMeat = "";
+									price += 17.5f;
+									meatChoice = "";
+								} else {
+									System.out.println("\nBeef or Pork");
+									isWrongAnswer = true;
+								}
 							}
 						} while (isWrongAnswer);
 					} else {
