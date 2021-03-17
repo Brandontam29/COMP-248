@@ -44,7 +44,7 @@ public class MagicMatrix {
 
 		// Loop through matrix and fill in unassigned squares by mathematical
 		// calculation
-		for (int a = 0; a < magicMatrix.length; a++) {
+		for (int a = 0; a < magicMatrix.length(); a++) {
 			for (int b = 0; b < magicMatrix.length; b++) {
 				if (magicMatrix[a][b] == 0) {
 					if (b == 1) {
